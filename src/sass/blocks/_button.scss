@@ -1,0 +1,42 @@
+.button {
+    --border-radius: 22px;
+    border: none;
+    background: $main-bg;
+    border-radius: var(--border-radius);
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    // transition: 0.1s all;
+    outline: 0 !important;
+    &:active {
+        filter: saturate(200%);
+        transform: scale(1.01);
+    }
+    &_nav-small {
+        color: $main-color;
+        --border-width: 2px;
+        border: 0;
+        width: 84px;
+        height: 30px;
+        position: relative;
+        z-index: 1;
+        &::before {
+            content: "";
+            display: block;
+            height: calc(100% - calc(var(--border-width) * 2));
+            width: calc(100% - calc(var(--border-width) * 2));
+            background: white;
+            position: absolute;
+            top: var(--border-width);
+            left: var(--border-width);
+            border-radius: calc(var(--border-radius) - var(--border-width));
+            z-index: -1;
+        }
+    }
+    &_nav-big {
+        color: #fff;
+        width: 196px;
+        height: 34px;
+    }
+}
