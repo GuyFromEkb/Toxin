@@ -11,25 +11,7 @@
         }
     }
     &__arrow {
-        position: relative;
-        &::after,
-        &::before {
-            position: absolute;
-            right: -16px;
-            top: 5px;
-            content: "";
-            display: block;
-            height: 8px;
-            width: 2px;
-            background-color: rgba(31, 32, 65);
-            transform: rotate(50deg);
-        }
-        &::before {
-            right: -11px;
-            transform: rotate(-50deg);
-        }
-        opacity: 0.5;
-        transition: all .9s;
+        @include arrow;
     }
     &__list {
         z-index: -1;
