@@ -35,6 +35,11 @@ body {
     margin: 0 auto;
 }
 
+.-emoji-cell- {
+    --adp-cell-background-color-selected: #ffb8ff;
+    --adp-cell-background-color-selected-hover: #fda5fd;
+}
+
 @import "blocks/header";
 @import "blocks/titles";
 @import "blocks/promo";
