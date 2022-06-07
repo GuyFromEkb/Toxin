@@ -85,11 +85,8 @@
     </section>
 
     <section class="promo">
-        <div class="tstcontain">
-            sdas
-        </div>
 
-        <svg><path d="M17,12 l -5,5 l 5,5"></path></svg> <br>
+
 
         <div class="container">
 
@@ -126,6 +123,61 @@
             <p class="promo__slogan"> Лучшие номера для вашей работы, отдыха и просто вдохновения </p>
         </div>
     </section>
+
+    <div class="modals">
+
+
+        <div class="disp-no modal modal__autorization">
+            <div class="title">Войти</div>
+
+            <form action="#" class="form form_autorization">
+                <input placeholder="Email" name="email" type="email">
+                <input class="form_autorization-pwd" placeholder="Пароль" name="paswrd" type="password">
+                <button class="button button_modal">Войти</button>
+            </form>
+
+            <div class="modal__footer">
+                <p>Нет аккаунта на Toxin?</p>
+                <button class="button button_nav-small button_modal-small">создать</button>
+            </div>
+
+        </div>
+
+
+
+
+        <div class=" modal modal__registration">
+            <div class="title">Регистрация аккаунта</div>
+
+            <form action="#" class="form form_registration">
+                <fieldset>
+                    <input name="name" type="text">
+                    <input name="surname" type="text">
+                    <label for="male"><input class="form__radio" id="male" name="gender" type="radio"> Мужчина</label>
+                    <label for="female"><input class="form__radio" id="female" name="gender" type="radio"> Женщина</label>
+                </fieldset>
+            </form>
+
+            <div class="modal__footer">
+                <p>Нет аккаунта на Toxin?</p>
+                <button class="button button_nav-small button_modal-small">создать</button>
+            </div>
+
+        </div>
+
+        <!-- <div class="modal modal__registration ">
+            <div class="title">Регистрация аккаунта</div>
+            <form action="#" class="form form_registration ">
+
+                <input type="text">
+
+
+
+
+            </form>
+        </div> -->
+
+    </div>
 
 
     <script src="js/air-datepicker.js"></script>

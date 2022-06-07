@@ -1,0 +1,29 @@
+.modal {
+    padding: 40px 30px 30px 30px;
+    background-color: white;
+    width: 380px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    &__autorization,
+    &__registration {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        height: 360px;
+    }
+    &__registration {
+        height: 649px
+    }
+    &__footer {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.disp-no {
+    display: none;
+}

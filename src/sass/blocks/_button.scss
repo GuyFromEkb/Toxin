@@ -9,6 +9,7 @@
     text-transform: uppercase;
     // transition: 0.1s all;
     outline: 0 !important;
+    color: #fff;
     &:active {
         filter: saturate(200%);
         transform: scale(1.01);
@@ -41,6 +42,36 @@
     }
     &_form {
         color: white;
+        height: 44px;
+    }
+    &_modal {
+        position: relative;
+        margin-top: 20px;
+        height: 44px;
+        &::after {
+            position: absolute;
+            top: 50%;
+            right: 14px;
+            content: "";
+            display: block;
+            border: solid rgb(255, 255, 255);
+            border-width: 0 2px 2px 0;
+            padding: 5px;
+            transform: translateY(-50%) rotate(-45deg);
+        }
+        &::before {
+            position: absolute;
+            top: 50%;
+            right: 13px;
+            transform: translateY(-50%);
+            content: "";
+            display: block;
+            background: rgb(255, 255, 255);
+            height: 2px;
+            width: 16px;
+        }
+    }
+    &_modal-small {
         height: 44px;
     }
 }

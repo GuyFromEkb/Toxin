@@ -1,6 +1,7 @@
 "use strict";
 window.addEventListener('DOMContentLoaded', () => {
 
+    // CALENDAR
     const calendar = document.querySelector('#calendar');
     const crp = document.querySelector('.tstcontain');
     console.log(crp);
@@ -23,12 +24,18 @@ window.addEventListener('DOMContentLoaded', () => {
         nextHtml: '<svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">        <path d="M8.36252 0.984375L16.3781 9L8.36252 17.0156L6.95627 15.6094L12.5344 9.98438H0.346894V8.01562H12.5344L6.95627 2.39062L8.36252 0.984375Z" fill="#BC9CFF"/>        </svg>',
     });
 
-    dp.show();
+    // dp.show();
     // console.log(dp.selectedDates);
 
     document.querySelector('.form__btn').addEventListener('click', function(e) {
         e.preventDefault();
+        console.dir(dp);
+        console.log(dp.selectedDates[1]);
         dp.show();
-    })
+    });
+
+
+    // AUTORIZATION
+
 
 });
