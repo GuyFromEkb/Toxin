@@ -1,43 +1,28 @@
 @mixin arrow {
+    cursor: pointer;
     position: relative;
-    &::after,
-    &::before {
-        position: absolute;
-        right: -16px;
-        top: 5px;
+    &::after {
         content: "";
         display: block;
-        height: 8px;
-        width: 2px;
-        background-color: rgba(31, 32, 65);
-        transform: rotate(50deg);
+        position: absolute;
+        right: -17px;
+        top: 2.5px;
+        border: solid rgba(31, 32, 65, .5);
+        border-width: 0 2px 2px 0;
+        padding: 3.4px;
+        transform: rotate(45deg);
     }
-    &::before {
-        right: -11px;
-        transform: rotate(-50deg);
-    }
-    opacity: 0.5;
-    transition: all .5s;
 }
 
-@mixin arrow_input {
-    position: relative;
-    &::after,
-    &::before {
-        position: absolute;
-        right: 17px;
-        top: 18px;
-        content: "";
-        display: block;
-        height: 8px;
-        width: 2px;
-        background-color: rgba(31, 32, 65);
-        transform: rotate(50deg);
-    }
-    &::before {
-        right: 22px;
-        transform: rotate(-50deg);
-    }
-    opacity: 0.5;
-    transition: all .5s;
-}
+// .right {
+//     transform: rotate(-45deg);
+// }
+// .left {
+//     transform: rotate(135deg);
+// }
+// .up {
+//     transform: rotate(-135deg);
+// }
+// .down {
+//     transform: rotate(45deg);
+// }

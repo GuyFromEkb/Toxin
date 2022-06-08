@@ -3,7 +3,9 @@
     position: relative;
     &:hover {
         .subnav__arrow {
-            opacity: 1;
+            &::after {
+                border-color: rgba(31, 32, 65, 1);
+            }
         }
         .subnav__list {
             visibility: visible;

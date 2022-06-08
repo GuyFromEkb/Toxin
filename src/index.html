@@ -73,7 +73,7 @@
                 </div>
                 <div class="header__authorization">
                     <div class="header__log-off">
-                        <button class="button button_nav-small mr20px">войти</button>
+                        <button id="sign-in" class="button button_nav-small mr20px">войти</button>
                         <button class="button button_nav-big">зарегистрироваться</button>
                     </div>
                     <div class="header__log-in">
@@ -89,33 +89,39 @@
 
 
         <div class="container">
+            <div class="modal">
+                <form action="#" class="form form__promo  ">
+                    <h1 class="form_title title">Найдём номера под ваши пожелания </h1>
+                    <div class="form__promo_wrap">
 
-            <form action="#" class="form__promo form ">
-                <h1 class="form_title title">Найдём номера под ваши пожелания </h1>
-                <div class="form__wrap">
+                        <div class="form__promo_input-wrap">
+                            <label class="subtitle" for="form_date-in">прибытие</label>
+                            <input placeholder="ДД.ММ.ГГГГ" id="calendar" type="text" name="date-in" id="form_date-in">
 
-                    <div class="form__input_wrap">
-                        <input id="calendar" type="text" name="date-in" id="form_date-in">
-                        <label class="subtitle" for="form_date-in">прибытие</label>
-                    </div>
-                    <div class="form__input_wrap">
-                        <input type="date" name="date-out" id="form_date-out">
-                        <label class="subtitle" for="form_date-out">выезд</label>
-                    </div>
-                    <div class="form__guest">
-                        <div class="form__input_wrap">
-                            <input type="text" name="guest" id="form_guest">
-                            <label class="subtitle" for="form_guest">гости</label>
                         </div>
+                        <div class="form__promo_input-wrap">
+                            <label class="subtitle" for="form_date-out">выезд</label>
+                            <input placeholder="ДД.ММ.ГГГГ" type="text" name="date-out" id="form_date-out">
+
+                        </div>
+                        <div class="form__promo_guest">
+                            <div class="form__promo_input-wrap">
+                                <label class="subtitle" for="form_guest">гости</label>
+                                <input class="tst" placeholder="Сколько гостей" type="text" name="guest" id="form_guest">
+
+                            </div>
+                        </div>
+
+                        <button class="button button_modal button_form form__promo_btn">подобрать номер</button>
                     </div>
 
-                    <button class="button button_form form__btn">подобрать номер</button>
-                </div>
 
 
 
+                </form>
 
-            </form>
+            </div>
+
 
 
 
@@ -124,10 +130,10 @@
         </div>
     </section>
 
-    <div class="modals">
+    <div class="modals overlay modal__hide ">
 
 
-        <div class="disp-no modal modal__autorization">
+        <div class="modal__hide  modal modal__autorization">
             <div class="title">Войти</div>
 
             <form action="#" class="form form_autorization">
@@ -146,36 +152,56 @@
 
 
 
-        <div class=" modal modal__registration">
+        <div class="modal__hide modal modal__registration">
             <div class="title">Регистрация аккаунта</div>
 
             <form action="#" class="form form_registration">
                 <fieldset>
-                    <input name="name" type="text">
-                    <input name="surname" type="text">
-                    <label for="male"><input class="form__radio" id="male" name="gender" type="radio"> Мужчина</label>
-                    <label for="female"><input class="form__radio" id="female" name="gender" type="radio"> Женщина</label>
+                    <input placeholder="Имя" name="name" type="text">
+                    <input placeholder="Фамилия" class="mt10px" name="surname" type="text">
+                    <div class="form_registration__wrap-male">
+
+                        <label class="form_registration__male" for="male">
+                            <input class="form__radio" id="male" name="gender" type="radio">
+                            <label for="male">Мужчина</label>
+                        </label>
+
+                        <div class="form_registration__male">
+                            <input class="form__radio" id="female" name="gender" type="radio">
+                            <label for="female">Женщина</label>
+                        </div>
+                    </div>
+
+
                 </fieldset>
+                <fieldset>
+                    <div class="subtitle">дата рождения</div>
+                    <input class="mt5px" placeholder="ДД.ММ.ГГГГ" name="born-date" type="text">
+                </fieldset>
+                <fieldset>
+                    <div class="subtitle">данные для входа в сервис</div>
+                    <input class="mt5px" placeholder="Email" name="email" type="email">
+                    <input class="mt10px" placeholder="Пароль" name="paswrd" type="password">
+                    <div class="form_registration_switch-wrap">
+                        <label class="form__switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                          </label>
+                        <p> Получать спецпредложения</p>
+
+                    </div>
+
+                </fieldset>
+                <button class="button button_modal">зарегистрироваться</button>
             </form>
 
             <div class="modal__footer">
-                <p>Нет аккаунта на Toxin?</p>
-                <button class="button button_nav-small button_modal-small">создать</button>
+                <p>Уже есть аккаунт на Toxin</p>
+                <button class="button button_nav-small button_modal-small">войти</button>
             </div>
 
         </div>
 
-        <!-- <div class="modal modal__registration ">
-            <div class="title">Регистрация аккаунта</div>
-            <form action="#" class="form form_registration ">
-
-                <input type="text">
-
-
-
-
-            </form>
-        </div> -->
 
     </div>
 
