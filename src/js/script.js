@@ -25,11 +25,28 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     // AUTORIZATION
+    const promoModal = document.querySelector('.modal__promo');
+    const modals = document.querySelectorAll('.modal');
     const btnIn = document.querySelectorAll('#sign-in');
+    const btnRegistration = document.querySelectorAll('#registation');
     const modalLogIn = document.querySelector('.modal__autorization');
+    const modalRegistration = document.querySelector('.modal__registration');
     const overlay = document.querySelector('.modals');
 
+
+    function showPromoModal() {
+        modals.forEach(item => {
+            hideModal(item);
+        });
+        promoModal.classList.remove('modal__hide');
+    }
+
+
     function showModal(modal) {
+        modals.forEach(item => {
+            hideModal(item);
+        });
+        document.body.style.overflow = "hidden"
         overlay.classList.remove('modal__hide');
         modal.classList.remove('modal__hide');
     }
@@ -37,6 +54,7 @@ window.addEventListener('DOMContentLoaded', () => {
     function hideModal(modal) {
         overlay.classList.add('modal__hide');
         modal.classList.add('modal__hide');
+        document.body.style.overflow = "";
     }
 
     btnIn.forEach(item => {
@@ -45,15 +63,26 @@ window.addEventListener('DOMContentLoaded', () => {
         });
         overlay.addEventListener('click', function(e) {
             const target = e.target;
-            if (target.classList.contains('overlay')) { hideModal(modalLogIn) }
+            if (target.classList.contains('overlay')) {
+                hideModal(modalLogIn);
+                showPromoModal()
+            }
         })
-
-
-
-
+    });
+    btnRegistration.forEach(item => {
+        item.addEventListener('click', function(e) {
+            showModal(modalRegistration);
+        });
+        overlay.addEventListener('click', function(e) {
+            const target = e.target;
+            if (target.classList.contains('overlay')) {
+                hideModal(modalRegistration);
+                showPromoModal()
+            }
+        })
     });
 
-
+    showPromoModal();
 
 
 });
