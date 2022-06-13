@@ -49,30 +49,25 @@
         position: relative;
         margin-top: 20px;
         height: 44px;
-        &::after {
-            position: absolute;
-            top: 50%;
-            right: 14px;
-            content: "";
-            display: block;
-            border: solid rgb(255, 255, 255);
-            border-width: 0 2px 2px 0;
-            padding: 5px;
-            transform: translateY(-50%) rotate(-45deg);
-        }
-        &::before {
-            position: absolute;
-            top: 50%;
-            right: 13px;
-            transform: translateY(-50%);
-            content: "";
-            display: block;
-            background: rgb(255, 255, 255);
-            height: 2px;
-            width: 16px;
-        }
+        @include bigArrow;
     }
     &_modal-small {
         height: 44px;
+    }
+    &_subscribe {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0);
+        width: 44px;
+        border: none;
+        @include bigArrow;
+        &::after {
+            border-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+            border-image-slice: 1;
+        }
+        &::before {
+            background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        }
     }
 }

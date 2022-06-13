@@ -2,27 +2,54 @@
     cursor: pointer;
     position: relative;
     &::after {
+        transition: all .4s;
         content: "";
         display: block;
         position: absolute;
         right: -17px;
         top: 2.5px;
-        border: solid rgba(31, 32, 65, .5);
+        border: solid rgba(31, 32, 65, 0.5);
         border-width: 0 2px 2px 0;
         padding: 3.4px;
         transform: rotate(45deg);
     }
+    // .right {
+    //     transform: rotate(-45deg);
+    // }
+    // .left {
+    //     transform: rotate(135deg);
+    // }
+    // .up {
+    //     transform: rotate(-135deg);
+    // }
+    // .down {
+    //     transform: rotate(45deg);
+    // }
 }
 
-// .right {
-//     transform: rotate(-45deg);
-// }
-// .left {
-//     transform: rotate(135deg);
-// }
-// .up {
-//     transform: rotate(-135deg);
-// }
-// .down {
-//     transform: rotate(45deg);
-// }
+@mixin bigArrow {
+    cursor: pointer;
+    // position: relative;
+    &::after {
+        position: absolute;
+        top: 50%;
+        right: 14px;
+        content: "";
+        display: block;
+        border: solid rgb(255, 255, 255);
+        border-width: 0 2px 2px 0;
+        padding: 5px;
+        transform: translateY(-50%) rotate(-45deg);
+    }
+    &::before {
+        position: absolute;
+        top: 50%;
+        right: 13px;
+        transform: translateY(-50%);
+        content: "";
+        display: block;
+        background: rgb(255, 255, 255);
+        height: 2px;
+        width: 16px;
+    }
+}

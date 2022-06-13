@@ -2,13 +2,13 @@
     position: relative;
     padding-top: 70px;
     background: url('../img/promo/bg.jpg') center/cover no-repeat;
-    height: 830px;
+    min-height: calc(100vh - 70px);
     &__slogan {
         color: rgba(31, 32, 65, 0.75);
         text-align: right;
         position: absolute;
         width: 270px;
         bottom: 18px;
-        right: 0;
+        right: 10%;
     }
 }

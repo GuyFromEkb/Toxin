@@ -4,6 +4,7 @@
     &:hover {
         .subnav__arrow {
             &::after {
+                transform: rotate(-135deg);
                 border-color: rgba(31, 32, 65, 1);
             }
         }
